@@ -36,6 +36,12 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
+|        | jobId            | companyId   | jobType   | degree      | major   | industry   |
+|:-------|:-----------------|:------------|:----------|:------------|:--------|:-----------|
+| count  | 1000000          | 1000000     | 1000000   | 1000000     | 1000000 | 1000000    |
+| unique | 1000000          | 63          | 8         | 5           | 9       | 7          |
+| top    | JOB1362685349471 | COMP39      | Senior    | High School | None    | Web        |
+| freq   | 1                | 16193       | 125886    | 236976      | 532355  | 143206     |
 
 **4. Modelling**
 A baseline model was created first as a benchmark to gauge the mean squared error (MSE). MSE is the selected model evaluation metric and all the modelling follows a 5-fold cross-validation. 
