@@ -31,7 +31,10 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 
 Plot results: 
 
-| jobId            | companyId   | jobType   | degree      | major   | industry   |\n+========+==================+=============+===========+=============+=========+============+\n| count  | 1000000          | 1000000     | 1000000   | 1000000     | 1000000 | 1000000    |\n+--------+------------------+-------------+-----------+-------------+---------+------------+\n| unique | 1000000          | 63          | 8         | 5           | 9       | 7          |\n+--------+------------------+-------------+-----------+-------------+---------+------------+\n| top    | JOB1362685349471 | COMP39      | Senior    | High School | None    | Web        |\n+--------+------------------+-------------+-----------+-------------+---------+------------+\n| freq   | 1                | 16193       | 125886    | 236976      | 532355  | 143206     |
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 
 **4. Modelling**
