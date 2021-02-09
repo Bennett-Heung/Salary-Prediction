@@ -14,10 +14,37 @@ Given the available datsets, we would like to estimate job salaries to understan
 **2. Data cleaning**
 As well as finding the data types and size of each dataset, data cleaning involved discovering and treating for missing data, duplicates, invalid data (for example, salaries <= 0) and suspected outliers (observations outside 25 percentile -1.5 * Inter Quartile Range and 75 percentile -1.5 * Inter Quartile Range). 
 
+Below is the summary of descriptive statistics for both the categorical and numeric data. 
+
+Categorical data summary:
+|        | jobId            | companyId   | jobType   | degree      | major   | industry   |
+|:-------|:-----------------|:------------|:----------|:------------|:--------|:-----------|
+| count  | 1000000          | 1000000     | 1000000   | 1000000     | 1000000 | 1000000    |
+| unique | 1000000          | 63          | 8         | 5           | 9       | 7          |
+| top    | JOB1362685349471 | COMP39      | Senior    | High School | None    | Web        |
+| freq   | 1                | 16193       | 125886    | 236976      | 532355  | 143206     |
+
+Numeric data summary: 
+|                     |   yearsExperience |   milesFromMetropolis |   salary |
+|:--------------------|------------------:|----------------------:|---------:|
+| count               |           1e+06   |                1e+06  |   1e+06  |
+| mean                |          11.9924  |               49.5293 | 116.062  |
+| std                 |           7.21239 |               28.8777 |  38.7179 |
+| min                 |           0       |                0      |   0      |
+| 25%                 |           6       |               25      |  88      |
+| 50%                 |          12       |               50      | 114      |
+| 75%                 |          18       |               75      | 141      |
+| max                 |          24       |               99      | 301      |
+| lower_outlier_check |           0       |                0      |   1      |
+| lower_outliers      |         -12       |              -50      |   8.5    |
+| upper_outlier_check |           0       |                0      |   1      |
+| upper_outliers      |          36       |              150      | 220.5    |
+
 While no missing data, duplicates or invalid data were found, suspected outliers were found and explored further for the salary values: 
 - 5 observations had salaries of zero. These are potentially missing salary inputs and were dropped given that we are predicting salaries. 
 
 Plot table of 5
+
 
 - 7,117 observations were suspected upper-end outliers. No actions were taken to these observations, as they were reasonable with their tendencies to be higher-up positions and higher educated.
 
@@ -31,17 +58,7 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 
 Plot results: 
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
 
-|        | jobId            | companyId   | jobType   | degree      | major   | industry   |
-|:-------|:-----------------|:------------|:----------|:------------|:--------|:-----------|
-| count  | 1000000          | 1000000     | 1000000   | 1000000     | 1000000 | 1000000    |
-| unique | 1000000          | 63          | 8         | 5           | 9       | 7          |
-| top    | JOB1362685349471 | COMP39      | Senior    | High School | None    | Web        |
-| freq   | 1                | 16193       | 125886    | 236976      | 532355  | 143206     |
 
 **4. Modelling**
 A baseline model was created first as a benchmark to gauge the mean squared error (MSE). MSE is the selected model evaluation metric and all the modelling follows a 5-fold cross-validation. 
