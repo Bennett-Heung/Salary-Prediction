@@ -31,11 +31,7 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 
 Plot results: 
 
-jobId companyId  jobType       degree    major industry
-count            1000000   1000000  1000000      1000000  1000000  1000000
-unique           1000000        63        8            5        9        7
-top     JOB1362685349471    COMP39   Senior  High School     None      Web
-freq                   1     16193   125886       236976   532355   143206
+'+--------+------------------+-------------+-----------+-------------+---------+------------+\n|        | jobId            | companyId   | jobType   | degree      | major   | industry   |\n+========+==================+=============+===========+=============+=========+============+\n| count  | 1000000          | 1000000     | 1000000   | 1000000     | 1000000 | 1000000    |\n+--------+------------------+-------------+-----------+-------------+---------+------------+\n| unique | 1000000          | 63          | 8         | 5           | 9       | 7          |\n+--------+------------------+-------------+-----------+-------------+---------+------------+\n| top    | JOB1362685349471 | COMP39      | Senior    | High School | None    | Web        |\n+--------+------------------+-------------+-----------+-------------+---------+------------+\n| freq   | 1                | 16193       | 125886    | 236976      | 532355  | 143206     |\n+--------+------------------+-------------+-----------+-------------+---------+------------+'
 
 **4. Modelling**
 A baseline model was created first as a benchmark to gauge the mean squared error (MSE). MSE is the selected model evaluation metric and all the modelling follows a 5-fold cross-validation. 
