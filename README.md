@@ -44,7 +44,13 @@ While no missing data, duplicates or invalid data were found, suspected outliers
 - 5 observations had salaries of zero. These are potentially missing salary inputs and were dropped given that we are predicting salaries. 
 
 Plot table of 5
-
+|        | jobId            | companyId   | jobType        | degree      | major       | industry   |   yearsExperience |   milesFromMetropolis |   salary |
+|-------:|:-----------------|:------------|:---------------|:------------|:------------|:-----------|------------------:|----------------------:|---------:|
+|  30559 | JOB1362684438246 | COMP44      | Junior         | Doctoral    | Math        | Auto       |                11 |                     7 |        0 |
+| 495984 | JOB1362684903671 | COMP34      | Junior         | None        | None        | Oil        |                 1 |                    25 |        0 |
+| 652076 | JOB1362685059763 | COMP25      | CTO            | High School | None        | Auto       |                 6 |                    60 |        0 |
+| 816129 | JOB1362685223816 | COMP42      | Manager        | Doctoral    | Engineering | Finance    |                18 |                     6 |        0 |
+| 828156 | JOB1362685235843 | COMP40      | Vice President | Masters     | Engineering | Web        |                 3 |                    29 |        0 |
 
 - 7,117 observations were suspected upper-end outliers. No actions were taken to these observations, as they were reasonable with their tendencies to be higher-up positions and higher educated.
 
