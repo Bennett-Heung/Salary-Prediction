@@ -15,11 +15,11 @@ Given the available datsets, we would like to estimate job salaries to understan
 
 **2. Data cleaning** 
 
-As well as finding the data types and size of each dataset, data cleaning involved discovering and treating for missing data, duplicates, invalid data (for example, salaries <= 0) and suspected outliers (observations outside 25 percentile -1.5 * Inter Quartile Range and 75 percentile -1.5 * Inter Quartile Range). 
+As well as finding the data types and size of each dataset, data cleaning involved discovering and treating missing data, duplicates, invalid data (for example, salaries <= 0) and suspected outliers. Lower outliers are outliers below the 25 percentile - 1.5 * Inter Quartile Range; and upper outliers are above the 75 percentile -1.5 * Inter Quartile Range. 
 
-Below is the summary of descriptive statistics for both the categorical and numeric data. 
+Below is the statistics summary for the categorical and numeric data. 
 
-Categorical data summary:
+### Categorical data summary
 |        | jobId            | companyId   | jobType   | degree      | major   | industry   |
 |:-------|:-----------------|:------------|:----------|:------------|:--------|:-----------|
 | count  | 1000000          | 1000000     | 1000000   | 1000000     | 1000000 | 1000000    |
@@ -27,7 +27,7 @@ Categorical data summary:
 | top    | JOB1362685349471 | COMP39      | Senior    | High School | None    | Web        |
 | freq   | 1                | 16193       | 125886    | 236976      | 532355  | 143206     |
 
-Numeric data summary: 
+### Numeric data summary: 
 |                     |   yearsExperience |   milesFromMetropolis |   salary |
 |:--------------------|------------------:|----------------------:|---------:|
 | count               |           1e+06   |                1e+06  |   1e+06  |
@@ -54,7 +54,7 @@ While no missing data, duplicates or invalid data were found, suspected outliers
 | 816129 | JOB1362685223816 | COMP42      | Manager        | Doctoral    | Engineering | Finance    |                18 |                     6 |        0 |
 | 828156 | JOB1362685235843 | COMP40      | Vice President | Masters     | Engineering | Web        |                 3 |                    29 |        0 |
 
-- 7,117 observations were suspected upper-end outliers (examples in table below). No actions were taken to these observations, as they were reasonable with their tendencies to be higher-up positions and higher educated. Note that these outliers were not tied to specific companies but mostly in the oil and finance industries with Engineering and Business majors. 
+- 7,117 observations were suspected upper-end outliers (examples of these outliers are in table below). No actions were taken to treat these observations, as they were reasonable to their tendencies of being higher-up positions and higher educated. Note that these outliers were not tied to specific companies but were mostly found in the oil and finance industries, and most upper outliers majored Engineering and Business. 
 
 |     | jobId            | companyId   | jobType        | degree   | major   | industry   |   yearsExperience |   milesFromMetropolis |   salary |
 |----:|:-----------------|:------------|:---------------|:---------|:--------|:-----------|------------------:|----------------------:|---------:|
@@ -86,19 +86,29 @@ Table: baseline model | MSE
 
 The following hypothesised solutions were designed to improve the results, i.e. lowering the MSE, with the best solutions tuned further in hopes of improving the models below a targeted MSE. Furthermore, one hot encoding was applied to the categorical feature variables ('companyId', 'jobType', 'degree', major' and 'industry') and normalisation was applied to the numeric feature variables ('yearsExperience', 'milesFromMetropolis') to further improve results. 
 
-Table: Model | MSE
+Plot: Model | MSE
 
-From the following vanilla models, the two models with the lowest MSEs were selected for tuning - Ridge regression and Gradient Boosting Regressor. 
 
-Table: Ridge Regression alpha's | MSE
 
-Different alphas did not significantly affect the Ridge regression results, with alpha = 10 showing the lowest MSE. 
+From the  vanilla models, the two models with the lowest MSEs were selected for tuning - Ridge regression and Gradient Boosting Regressor. 
 
-Table: Gradient Boosting Regressors (n_estimators, max_depth) | MSE 
+### Ridge Regressions
+
+|                                   |   mse_mean |   mse_std |
+|:----------------------------------|-----------:|----------:|
+| Ridge(alpha=0.01, random_state=0) |    384.437 |   1.41258 |
+| Ridge(alpha=0.1, random_state=0)  |    384.437 |   1.41258 |
+| Ridge(alpha=1, random_state=0)    |    384.437 |   1.41257 |
+| Ridge(alpha=10, random_state=0)   |    384.437 |   1.41251 |
+
+Different alphas did not significantly affect the Ridge regression results. The Ridge regression (alpha = 10) has the lowest MSE. 
+
+
+### Gradient Boosting Regressors (n_estimators, max_depth)
 
 The Gradient Boosting Regressor with the lowest MSE is ... (is it less than the goal of MSE 360?) and the feature importance is: 
 
-Plot feature importance
+Plot feature importance 
 Table feature importance 
 
 **5. Deploying**
