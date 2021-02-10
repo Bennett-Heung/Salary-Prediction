@@ -40,10 +40,9 @@ Numeric data summary:
 | upper_outlier_check |           0       |                0      |   1      |
 | upper_outliers      |          36       |              150      | 220.5    |
 
-While no missing data, duplicates or invalid data were found, suspected outliers were found and explored further for the salary values: 
+While no missing data, duplicates or invalid data were found, suspected outliers in terms of salary were found and explored further: 
 - 5 observations had salaries of zero. These are potentially missing salary inputs and were dropped given that we are predicting salaries. 
 
-Plot table of 5
 |        | jobId            | companyId   | jobType        | degree      | major       | industry   |   yearsExperience |   milesFromMetropolis |   salary |
 |-------:|:-----------------|:------------|:---------------|:------------|:------------|:-----------|------------------:|----------------------:|---------:|
 |  30559 | JOB1362684438246 | COMP44      | Junior         | Doctoral    | Math        | Auto       |                11 |                     7 |        0 |
@@ -54,16 +53,25 @@ Plot table of 5
 
 - 7,117 observations were suspected upper-end outliers. No actions were taken to these observations, as they were reasonable with their tendencies to be higher-up positions and higher educated.
 
-Plot table of head for 7,117, and line charts
+Example of five upper-end outliers 
+|     | jobId            | companyId   | jobType        | degree   | major   | industry   |   yearsExperience |   milesFromMetropolis |   salary |
+|----:|:-----------------|:------------|:---------------|:---------|:--------|:-----------|------------------:|----------------------:|---------:|
+| 266 | JOB1362684407953 | COMP30      | CEO            | Masters  | Biology | Oil        |                23 |                    60 |      223 |
+| 362 | JOB1362684408049 | COMP38      | CTO            | Masters  | None    | Health     |                24 |                     3 |      223 |
+| 560 | JOB1362684408247 | COMP53      | CEO            | Masters  | Biology | Web        |                22 |                     7 |      248 |
+| 670 | JOB1362684408357 | COMP26      | CEO            | Masters  | Math    | Auto       |                23 |                     9 |      240 |
+| 719 | JOB1362684408406 | COMP54      | Vice President | Doctoral | Biology | Oil        |                21 |                    14 |      225 |
+
 
 
 **3. Exploratory Data Analysis (EDA)**
 For convenience, 'train_data' was define as the merging of training datasets after data cleaning. EDA was performed to better understand and visualise the data. While performing EDA, the numeric and categorical variables were defined as the following: 
-- Numeric variables: i) Target variable ('salary') and ii) numeric features - 'yearsExperience' and 'milesFromMetropolis'
+- Numeric variables: i) Target variable ('salary') and ii) numeric features - 'yearsExperience' and 'milesFromMetropolis'. 
 - Categorical features: 'companyId','jobType','degree','major' and 'industry'. 
 
 Plot results: 
 
+The correlation heatmap 
 
 
 **4. Modelling**
