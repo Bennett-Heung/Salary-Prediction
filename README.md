@@ -7,19 +7,19 @@ Given the available datsets, we would like to estimate job salaries to understan
 
 ## Approach
 
-**1. Data loading** 
+### 1. Data loading 
 
 - 'train_features': training dataset for each feature of each job ID: the job title, company, degree, major, industry, years of experience and distance from a metropolis (miles).
 - 'train_salaries': training dataset of salaries (target variable) for each job ID  
 - 'test_features': testing dataset equivalent of the feature train set.
 
-**2. Data cleaning** 
+### 2. Data cleaning 
 
 As well as finding the data types and size of each dataset, data cleaning involved discovering and treating missing data, duplicates, invalid data (for example, salaries <= 0) and suspected outliers. Lower outliers are outliers below the 25 percentile - 1.5 * Inter Quartile Range; and upper outliers are above the 75 percentile -1.5 * Inter Quartile Range. 
 
 Below is the statistics summary for the categorical and numeric data. 
 
-### Categorical data summary
+#### Categorical data summary
 |        | jobId            | companyId   | jobType   | degree      | major   | industry   |
 |:-------|:-----------------|:------------|:----------|:------------|:--------|:-----------|
 | count  | 1000000          | 1000000     | 1000000   | 1000000     | 1000000 | 1000000    |
@@ -27,7 +27,7 @@ Below is the statistics summary for the categorical and numeric data.
 | top    | JOB1362685349471 | COMP39      | Senior    | High School | None    | Web        |
 | freq   | 1                | 16193       | 125886    | 236976      | 532355  | 143206     |
 
-### Numeric data summary: 
+#### Numeric data summary: 
 |                     |   yearsExperience |   milesFromMetropolis |   salary |
 |:--------------------|------------------:|----------------------:|---------:|
 | count               |           1e+06   |                1e+06  |   1e+06  |
@@ -68,7 +68,7 @@ While no missing data, duplicates or invalid data were found, suspected outliers
 !!! Insert line charts of upper outliers here !!! 
 
 
-**3. Exploratory Data Analysis (EDA)** 
+### 3. Exploratory Data Analysis (EDA) 
 
 For convenience, 'train_data' was define as the merging of training datasets after data cleaning. EDA was performed to better understand and visualise the data. While performing EDA, the numeric and categorical variables were defined as the following: 
 - Numeric variables: i) Target variable ('salary') and ii) numeric features - 'yearsExperience' and 'milesFromMetropolis'. 
@@ -78,7 +78,7 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 !!! Insert all EDA plots of here !!! 
 
 
-**4. Modelling** 
+### 4. Modelling 
 
 A baseline model was created first as a benchmark to gauge the mean squared error (MSE). MSE is the selected model evaluation metric and all the modelling follows a 5-fold cross-validation. 
 
@@ -92,7 +92,7 @@ Plot: Model | MSE
 
 From the  vanilla models, the two models with the lowest MSEs were selected for tuning - Ridge regression and Gradient Boosting Regressor. 
 
-### Ridge Regressions
+#### Ridge Regressions
 
 |                                   |   mse_mean |   mse_std |
 |:----------------------------------|-----------:|----------:|
@@ -104,13 +104,13 @@ From the  vanilla models, the two models with the lowest MSEs were selected for 
 Different alphas did not significantly affect the Ridge regression results. The Ridge regression (alpha = 10) has the lowest MSE. 
 
 
-### Gradient Boosting Regressors (n_estimators, max_depth)
+#### Gradient Boosting Regressors (n_estimators, max_depth)
 
 The Gradient Boosting Regressor with the lowest MSE is ... (is it less than the goal of MSE 360?) and the feature importance is: 
 
 Plot feature importance 
 Table feature importance 
 
-**5. Deploying**
+### 5. Deploying 
 
 This Gradient Boosting Regressor( ) is used to predict the test set. 
