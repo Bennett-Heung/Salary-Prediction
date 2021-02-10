@@ -6,12 +6,15 @@ Job salaries and differences between them are determined by a number of various 
 Given the available datsets, we would like to estimate job salaries to understand key features driving salaries and deploy a model solution to predict salaries to gauge reasonable salaries based on these features. 
 
 ## Approach
+
 **1. Data loading** 
+
 - 'train_features': training dataset for each feature of each job ID: the job title, company, degree, major, industry, years of experience and distance from a metropolis (miles).
 - 'train_salaries': training dataset of salaries (target variable) for each job ID  
 - 'test_features': testing dataset equivalent of the feature train set.
 
 **2. Data cleaning** 
+
 As well as finding the data types and size of each dataset, data cleaning involved discovering and treating for missing data, duplicates, invalid data (for example, salaries <= 0) and suspected outliers (observations outside 25 percentile -1.5 * Inter Quartile Range and 75 percentile -1.5 * Inter Quartile Range). 
 
 Below is the summary of descriptive statistics for both the categorical and numeric data. 
@@ -66,6 +69,7 @@ While no missing data, duplicates or invalid data were found, suspected outliers
 
 
 **3. Exploratory Data Analysis (EDA)** 
+
 For convenience, 'train_data' was define as the merging of training datasets after data cleaning. EDA was performed to better understand and visualise the data. While performing EDA, the numeric and categorical variables were defined as the following: 
 - Numeric variables: i) Target variable ('salary') and ii) numeric features - 'yearsExperience' and 'milesFromMetropolis'. 
 - Categorical features: 'companyId','jobType','degree','major' and 'industry'. 
@@ -75,6 +79,7 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 
 
 **4. Modelling** 
+
 A baseline model was created first as a benchmark to gauge the mean squared error (MSE). MSE is the selected model evaluation metric and all the modelling follows a 5-fold cross-validation. 
 
 Table: baseline model | MSE
@@ -97,4 +102,5 @@ Plot feature importance
 Table feature importance 
 
 **5. Deploying**
+
 This Gradient Boosting Regressor( ) is used to predict the test set. 
