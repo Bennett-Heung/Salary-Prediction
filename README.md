@@ -51,7 +51,7 @@ While no missing data, duplicates or invalid data were found, suspected outliers
 | 816129 | JOB1362685223816 | COMP42      | Manager        | Doctoral    | Engineering | Finance    |                18 |                     6 |        0 |
 | 828156 | JOB1362685235843 | COMP40      | Vice President | Masters     | Engineering | Web        |                 3 |                    29 |        0 |
 
-- 7,117 observations were suspected upper-end outliers (examples below). No actions were taken to these observations, as they were reasonable with their tendencies to be higher-up positions and higher educated.
+- 7,117 observations were suspected upper-end outliers (examples in table below). No actions were taken to these observations, as they were reasonable with their tendencies to be higher-up positions and higher educated. Note that these outliers were not tied to specific companies but mostly in the oil and finance industries with Engineering and Business majors. 
 
 |     | jobId            | companyId   | jobType        | degree   | major   | industry   |   yearsExperience |   milesFromMetropolis |   salary |
 |----:|:-----------------|:------------|:---------------|:---------|:--------|:-----------|------------------:|----------------------:|---------:|
@@ -62,15 +62,16 @@ While no missing data, duplicates or invalid data were found, suspected outliers
 | 719 | JOB1362684408406 | COMP54      | Vice President | Doctoral | Biology | Oil        |                21 |                    14 |      225 |
 
 
+!!! Insert line charts of upper outliers here !!! 
+
 
 **3. Exploratory Data Analysis (EDA)**
 For convenience, 'train_data' was define as the merging of training datasets after data cleaning. EDA was performed to better understand and visualise the data. While performing EDA, the numeric and categorical variables were defined as the following: 
 - Numeric variables: i) Target variable ('salary') and ii) numeric features - 'yearsExperience' and 'milesFromMetropolis'. 
 - Categorical features: 'companyId','jobType','degree','major' and 'industry'. 
 
-Plot results: 
 
-The correlation heatmap 
+!!! Insert all EDA plots of here !!! 
 
 
 **4. Modelling**
