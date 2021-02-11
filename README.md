@@ -66,18 +66,23 @@ While no missing data, duplicates or invalid data were found, suspected outliers
 
 
 *Upper outliers: Salary by Company ID*
+
 ![upper_outliers_companyId_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/upper_outliers_companyId_salary.png)
 
 *Upper outliers: Salary by Job Type*
+
 ![upper_outliers_jobType_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/upper_outliers_jobType_salary.png)
 
 *Upper outliers: Salary by Degree*
+
 ![upper_outliers_degree_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/upper_outliers_degree_salary.png)
 
 *Upper outliers: Salary by Major*
+
 ![upper_outliers_major_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/upper_outliers_major_salary.png)
 
 *Upper outliers: Salary by Industry*
+
 ![upper_outliers_industry_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/upper_outliers_industry_salary.png)
 
 
