@@ -130,7 +130,9 @@ Between the feature variables:
 
 A baseline model was created first as a benchmark to gauge the mean squared error (MSE). MSE is the selected model evaluation metric and all the modelling follows a 5-fold cross-validation. 
 
-Table: baseline model | MSE
+| Model    | MSE      |
+|----------|----------|
+| Baseline |399.123   |
 
 The following hypothesised solutions were designed to improve the results, i.e. lowering the MSE, with the best solutions tuned further in hopes of improving the models below a targeted MSE. Furthermore, one hot encoding was applied to the categorical feature variables ('companyId', 'jobType', 'degree', major' and 'industry') and normalisation was applied to the numeric feature variables ('yearsExperience', 'milesFromMetropolis') to further improve results. 
 
@@ -155,7 +157,7 @@ Different alphas did not significantly affect the Ridge regression results. The 
 
 The Gradient Boosting Regressor with the lowest MSE is ... (is it less than the goal of MSE 360?) and the feature importance is: 
 
-#### Feature importance 
+*Feature importance* 
 ![Feature_importances](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/feature_importances.png)
 
 
