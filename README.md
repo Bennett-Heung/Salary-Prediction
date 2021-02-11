@@ -80,25 +80,32 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 ![EDA_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/numeric_target_plots.png)
 
 *Miles From Metropolis*
+
 ![EDA_milesFromMetropolis](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/numeric_feature_plotsmilesFromMetropolis.png)
 
 *Years of Experience*
+
 ![EDA_yearsExperience](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/numeric_feature_plotsyearsExperience.png)
 
 #### Categorical features
 *Company ID*
+
 ![EDA_companyId](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotscompanyId.png)
 
 *Degree*
+
 ![EDA_degree](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsdegree.png)
 
 *Industry*
+
 ![EDA_industry](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsindustry.png)
 
 *Job Type*
+
 ![EDA_jobType](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsjobType.png)
 
 *Major*
+
 ![EDA_major](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsmajor.png)
 
 #### Correlations
@@ -116,6 +123,7 @@ Between the feature variables:
 - There are no other significant collinearities, as they are all close to zero.
 
 *Correlations*
+
 ![corr_heatmap](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/corr_heatmap.png)
 
 ### 4. Modelling 
