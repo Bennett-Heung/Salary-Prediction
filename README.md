@@ -155,8 +155,10 @@ Different alphas did not significantly affect the Ridge regression results. The 
 
 The Gradient Boosting Regressor with the lowest MSE is ... (is it less than the goal of MSE 360?) and the feature importance is: 
 
-Plot feature importance 
-Table feature importance 
+#### Feature importance 
+![Feature_importances](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/feature_importances.png)
+
+
 
 ### 5. Deploying 
 
