@@ -88,7 +88,7 @@ Years of Experience
 Company ID
 ![EDA_companyId](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotscompanyId.png)
 
-Degree
+**Degree**
 ![EDA_degree](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsdegree.png)
 
 Industry
