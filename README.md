@@ -134,13 +134,12 @@ Table: baseline model | MSE
 
 The following hypothesised solutions were designed to improve the results, i.e. lowering the MSE, with the best solutions tuned further in hopes of improving the models below a targeted MSE. Furthermore, one hot encoding was applied to the categorical feature variables ('companyId', 'jobType', 'degree', major' and 'industry') and normalisation was applied to the numeric feature variables ('yearsExperience', 'milesFromMetropolis') to further improve results. 
 
-Plot: Model | MSE
-
+Vanilla models were applied to shortlist which models were to be tuned to provide a lower MSE (goal was set for a MSE below 360).  
 ![Vanilla_MSEs](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/vanilla_models_mse.png)
 
-From the  vanilla models, the two models with the lowest MSEs were selected for tuning - Ridge regression and Gradient Boosting Regressor. 
+From the vanilla models, the two models with the lowest MSEs were selected for tuning - Ridge regression and Gradient Boosting Regressor. 
 
-#### Ridge Regressions
+#### Ridge Regressions (alpha)
 
 |                                   |   mse_mean |   mse_std |
 |:----------------------------------|-----------:|----------:|
