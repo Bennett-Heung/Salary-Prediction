@@ -74,10 +74,39 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 - Numeric variables: i) Target variable ('salary') and ii) numeric features - 'yearsExperience' and 'milesFromMetropolis'. 
 - Categorical features: 'companyId','jobType','degree','major' and 'industry'. 
 
+#### Numeric features
+![EDA_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/numeric_target_plots.png)
 
-!!! Insert all EDA plots of here !!! 
+![EDA_milesFromMetropolis](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/numeric_feature_plotsmilesFromMetropolis.png)
 
-![test](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotscompanyId.png)
+![EDA_yearsExperience](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/numeric_feature_plotsyearsExperience.png)
+
+#### Categorical features
+![EDA_companyId](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotscompanyId.png)
+
+![EDA_degree](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsdegree.png)
+
+![EDA_industry](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsindustry.png)
+
+![EDA_jobType](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsjobType.png)
+
+![EDA_major](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotsmajor.png)
+
+#### Correlations
+The heatmap of correlations below provide the following findings of correlations between the features variables and salary (target variable), and other correlations amongst the features themselves.
+
+In terms of correlations with salary (target variable):
+- Job position (jobType) is the variable that positively correlates most to salary, followed by degree (degree), years of experience (yearsExperience) and major (major).
+- There is also slight positive correlations between the job industry (industry) and salary.
+- There is no significant correlation between companies (companyId) and salary.
+- Only key negative correlation of salary is the miles from metropolis (milesFromMetropolis).
+
+Between the feature variables:
+- There is a significant positive correlation between major and degree (0.85).
+- Job positions are slightly positively correlated to both major and degree.
+- There are no other significant collinearities, as they are all close to zero.
+
+![corr_heatmap](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/corr_heatmap.png)
 
 ### 4. Modelling 
 
