@@ -143,12 +143,12 @@ From the vanilla models, the two models with the lowest MSEs were selected for t
 
 #### Ridge Regressions (alpha)
 
-|                                   |   mse_mean |   mse_std |
-|:----------------------------------|-----------:|----------:|
-| Ridge(alpha=0.01, random_state=0) |    384.437 |   1.41258 |
-| Ridge(alpha=0.1, random_state=0)  |    384.437 |   1.41258 |
-| Ridge(alpha=1, random_state=0)    |    384.437 |   1.41257 |
-| Ridge(alpha=10, random_state=0)   |    384.437 |   1.41251 |
+|                                   |   mse_mean    |
+|:----------------------------------|--------------:|
+| Ridge(alpha=0.01, random_state=0) |    384.431525 |
+| Ridge(alpha=0.1, random_state=0)  |    384.431524 |
+| Ridge(alpha=1, random_state=0)    |    384.431520 |
+| Ridge(alpha=10, random_state=0)   |    384.431488 |
 
 Different alphas did not significantly affect the Ridge regression results. The Ridge regression (alpha = 10) has the lowest MSE. 
 
@@ -156,6 +156,21 @@ Different alphas did not significantly affect the Ridge regression results. The 
 #### Gradient Boosting Regressors (n_estimators, max_depth)
 
 The Gradient Boosting Regressor with the lowest MSE is ... (is it less than the goal of MSE 360?) and the feature importance is: 
+
+|                                                                          |   mse_mean |   mse_std |
+|:-------------------------------------------------------------------------|-----------:|----------:|
+| GradientBoostingRegressor(n_estimators=50, random_state=0)               |    440.705 |  0.959394 |
+| GradientBoostingRegressor(n_estimators=100, random_state=0)              |    375.398 |  0.929363 |
+| GradientBoostingRegressor(n_estimators=150, random_state=0)              |    363.24  |  0.916539 |
+| GradientBoostingRegressor(n_estimators=200, random_state=0)              |    359.219 |  0.835095 |
+| GradientBoostingRegressor(max_depth=7, n_estimators=50, random_state=0)  |    365.602 |  0.8275   |
+| GradientBoostingRegressor(max_depth=7, n_estimators=100, random_state=0) |    357.258 |  0.716826 |
+| GradientBoostingRegressor(max_depth=7, n_estimators=150, random_state=0) |    356.899 |  0.689418 |
+| GradientBoostingRegressor(max_depth=7, n_estimators=200, random_state=0) |    357.054 |  0.662483 |
+| GradientBoostingRegressor(max_depth=9, n_estimators=50, random_state=0)  |    360.88  |  0.901125 |
+| GradientBoostingRegressor(max_depth=9,  n_estimators=100, random_state=0 |    357.991 |  0.704527 |
+| GradientBoostingRegressor(max_depth=9, n_estimators=150, random_state=0) |    358.628 |  0.638715 |
+| GradientBoostingRegressor(max_depth=9, n_estimators=200, random_state=0) |    359.329 |  0.59499  |
 
 *Feature importance* 
 ![Feature_importances](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/feature_importances.png)
