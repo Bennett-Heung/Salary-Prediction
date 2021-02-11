@@ -155,7 +155,7 @@ Different alphas did not significantly affect the Ridge regression results. The 
 
 #### Gradient Boosting Regressors (n_estimators, max_depth)
 
-The Gradient Boosting Regressor with the lowest MSE is ... (is it less than the goal of MSE 360?) and the feature importance is: 
+The Gradient Boosting Regressor (max_depth=7, n_estimators=150, random_state=0) has the lowest MSE of 356.899, which achieves the goal of a MSE less than 360.  
 
 |                                                                          |   mse_mean |   mse_std |
 |:-------------------------------------------------------------------------|-----------:|----------:|
