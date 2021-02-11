@@ -193,6 +193,7 @@ The Gradient Boosting Regressor (max_depth=7, n_estimators=150, random_state=0) 
 *Feature importance* 
 ![Feature_importances](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/feature_importances.png)
 
+The top three most important features are: the Janitor position, years of experience and miles from metropolis. Janitors having the highest feature importance is reasonable as the distribution of salaries for janitors are far less than the other job types, as indicated in the boxplot in the EDA section. Years of experience and miles from metropolis are the other top important features, which is reasonable to their respective visible linear relationships with salary.   
 
 
 ### 5. Deploying 
