@@ -136,7 +136,7 @@ The following hypothesised solutions were designed to improve the results, i.e. 
 
 Plot: Model | MSE
 
-
+![Vanilla_MSEs](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/vanilla_models_mse.png)
 
 From the  vanilla models, the two models with the lowest MSEs were selected for tuning - Ridge regression and Gradient Boosting Regressor. 
 
