@@ -162,4 +162,4 @@ The Gradient Boosting Regressor with the lowest MSE is ... (is it less than the 
 
 ### 5. Deploying 
 
-This Gradient Boosting Regressor( ) is used to predict the test set. 
+This Gradient Boosting Regressor (max_depth=7, n_estimators=150, random_state=0) is used to predict the test set. 
