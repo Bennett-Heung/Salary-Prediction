@@ -77,6 +77,7 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 
 !!! Insert all EDA plots of here !!! 
 
+![test](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/categorical_feature_plotscompanyId.png)
 
 ### 4. Modelling 
 
