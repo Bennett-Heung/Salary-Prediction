@@ -76,6 +76,7 @@ For convenience, 'train_data' was define as the merging of training datasets aft
 
 #### Numeric features
 *Salary*
+
 ![EDA_salary](https://github.com/Bennett-Heung/Salary-Prediction/blob/main/images/numeric_target_plots.png)
 
 *Miles From Metropolis*
