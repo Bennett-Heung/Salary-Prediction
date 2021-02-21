@@ -1,5 +1,9 @@
 # Salary-Prediction
 Predict salary based on job descriptions
+In this repository: 
+- 'Salary_Prediction (1)' is the notebook
+- 'data.zip' contains the raw data used 
+- 'test_salaries (1).zip' contains the predicted salaries of the test dataset.
 
 ## Defining the problem
 Job salaries and differences between them are determined by a number of various factors, including skillset, experience and the job title itself. 
